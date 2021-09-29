@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+   </head>
+   <body>
+       <form action="hi" method='GET'>
+           <input type="text" placeholder="Type something..." id=username>
+           <button type="button" onclick=callUser()>
+               Submit
+           </button>
+       </form>
+       <script>
+           console.log(document.getElementById('username').value);
+           function callUser() {
+
+               var username = document.getElementById('username').value;
+               window.open('http://localhost:8000/hi?user='+encodeURI(username));
+           }
+       </script>
+   </body>
+</html>
+
+
+   
